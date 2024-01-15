@@ -12,22 +12,52 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(803, 600)
+        Form.resize(800, 600)
         Form.setMouseTracking(False)
         Form.setStyleSheet("color: rgb(66, 255, 136);\n"
 "background-color: rgb(215, 215, 215);")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
+        self.horizontalLayout_10 = QtWidgets.QHBoxLayout(Form)
+        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
+        self.widget = QtWidgets.QWidget(parent=Form)
+        self.widget.setStyleSheet("background-color: rgb(68, 245, 232);\n"
+"border-radius:15px;")
+        self.widget.setObjectName("widget")
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.widget)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem)
+        self.pushButton_3 = QtWidgets.QPushButton(parent=self.widget)
+        self.pushButton_3.setStyleSheet("border:none;\n"
+"image:url(imgs/x.png)")
+        self.pushButton_3.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../imgs/x.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_3.setIcon(icon)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout_5.addWidget(self.pushButton_3)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_5)
+        self.stackedWidget = QtWidgets.QStackedWidget(parent=self.widget)
+        self.stackedWidget.setObjectName("stackedWidget")
+        self.page = QtWidgets.QWidget()
+        self.page.setObjectName("page")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.page)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        spacerItem = QtWidgets.QSpacerItem(20, 119, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 119, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem1)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem1)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem2)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setSpacing(30)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.label = QtWidgets.QLabel(parent=Form)
+        self.label = QtWidgets.QLabel(parent=self.page)
         font = QtGui.QFont()
         font.setFamily(".Apple Symbols Fallback")
         font.setPointSize(60)
@@ -36,7 +66,7 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
-        self.lineEdit = QtWidgets.QLineEdit(parent=Form)
+        self.lineEdit = QtWidgets.QLineEdit(parent=self.page)
         font = QtGui.QFont()
         font.setPointSize(15)
         self.lineEdit.setFont(font)
@@ -48,7 +78,7 @@ class Ui_Form(object):
         self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
         self.verticalLayout.addWidget(self.lineEdit)
-        self.lineEdit_2 = QtWidgets.QLineEdit(parent=Form)
+        self.lineEdit_2 = QtWidgets.QLineEdit(parent=self.page)
         font = QtGui.QFont()
         font.setPointSize(15)
         self.lineEdit_2.setFont(font)
@@ -63,17 +93,17 @@ class Ui_Form(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setSpacing(22)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.checkBox = QtWidgets.QCheckBox(parent=Form)
+        self.checkBox = QtWidgets.QCheckBox(parent=self.page)
         self.checkBox.setStyleSheet("color: rgb(102, 102, 102);")
         self.checkBox.setAutoExclusive(True)
         self.checkBox.setObjectName("checkBox")
         self.horizontalLayout.addWidget(self.checkBox)
-        self.checkBox_2 = QtWidgets.QCheckBox(parent=Form)
+        self.checkBox_2 = QtWidgets.QCheckBox(parent=self.page)
         self.checkBox_2.setStyleSheet("color: rgb(102, 102, 102);")
         self.checkBox_2.setAutoExclusive(True)
         self.checkBox_2.setObjectName("checkBox_2")
         self.horizontalLayout.addWidget(self.checkBox_2)
-        self.checkBox_3 = QtWidgets.QCheckBox(parent=Form)
+        self.checkBox_3 = QtWidgets.QCheckBox(parent=self.page)
         self.checkBox_3.setStyleSheet("color: rgb(102, 102, 102);")
         self.checkBox_3.setChecked(True)
         self.checkBox_3.setAutoExclusive(True)
@@ -83,7 +113,7 @@ class Ui_Form(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setSpacing(100)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.pushButton = QtWidgets.QPushButton(parent=Form)
+        self.pushButton = QtWidgets.QPushButton(parent=self.page)
         font = QtGui.QFont()
         font.setPointSize(20)
         self.pushButton.setFont(font)
@@ -103,7 +133,7 @@ class Ui_Form(object):
 "}")
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout_2.addWidget(self.pushButton)
-        self.pushButton_2 = QtWidgets.QPushButton(parent=Form)
+        self.pushButton_2 = QtWidgets.QPushButton(parent=self.page)
         font = QtGui.QFont()
         font.setPointSize(20)
         self.pushButton_2.setFont(font)
@@ -125,13 +155,135 @@ class Ui_Form(object):
         self.horizontalLayout_2.addWidget(self.pushButton_2)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.horizontalLayout_3.addLayout(self.verticalLayout)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem2)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem3)
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 118, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem3)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 118, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem4)
+        self.horizontalLayout_4.addLayout(self.verticalLayout_2)
+        self.stackedWidget.addWidget(self.page)
+        self.page_2 = QtWidgets.QWidget()
+        self.page_2.setObjectName("page_2")
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.page_2)
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        spacerItem5 = QtWidgets.QSpacerItem(20, 119, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem5)
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem6)
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_5.setSpacing(30)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        self.label_2 = QtWidgets.QLabel(parent=self.page_2)
+        font = QtGui.QFont()
+        font.setFamily(".Apple Symbols Fallback")
+        font.setPointSize(60)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("color: rgb(0, 170, 127);")
+        self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout_5.addWidget(self.label_2)
+        self.lineEdit_3 = QtWidgets.QLineEdit(parent=self.page_2)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.lineEdit_3.setFont(font)
+        self.lineEdit_3.setAutoFillBackground(False)
+        self.lineEdit_3.setStyleSheet("border-radius:15px;\n"
+"background-color: rgb(234, 234, 234);\n"
+"padding:5px;\n"
+"color: rgb(17, 17, 17);")
+        self.lineEdit_3.setText("")
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.verticalLayout_5.addWidget(self.lineEdit_3)
+        self.lineEdit_4 = QtWidgets.QLineEdit(parent=self.page_2)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.lineEdit_4.setFont(font)
+        self.lineEdit_4.setStyleSheet("border-radius:15px;\n"
+"background-color: rgb(234, 234, 234);\n"
+"padding:5px;\n"
+"color: rgb(17, 17, 17);")
+        self.lineEdit_4.setText("")
+        self.lineEdit_4.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.verticalLayout_5.addWidget(self.lineEdit_4)
+        self.lineEdit_5 = QtWidgets.QLineEdit(parent=self.page_2)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.lineEdit_5.setFont(font)
+        self.lineEdit_5.setStyleSheet("border-radius:15px;\n"
+"background-color: rgb(234, 234, 234);\n"
+"padding:5px;\n"
+"color: rgb(17, 17, 17);")
+        self.lineEdit_5.setText("")
+        self.lineEdit_5.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.verticalLayout_5.addWidget(self.lineEdit_5)
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_9.setSpacing(100)
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        self.pushButton_4 = QtWidgets.QPushButton(parent=self.page_2)
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.pushButton_4.setFont(font)
+        self.pushButton_4.setStyleSheet("QPushButton{\n"
+"    border-radius:15px;\n"
+"    color:rgb(255,255,255);\n"
+"    padding:5px;\n"
+"    background-color: rgb(130, 130, 130);\n"
+"}\n"
+"QPushButton:hover{\n"
+"    padding:5px;\n"
+"    background-color: rgb(229, 229, 229);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    padding:5px;\n"
+"    background-color: rgb(127, 127, 127);\n"
+"}")
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.horizontalLayout_9.addWidget(self.pushButton_4)
+        self.pushButton_5 = QtWidgets.QPushButton(parent=self.page_2)
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.pushButton_5.setFont(font)
+        self.pushButton_5.setStyleSheet("QPushButton{\n"
+"    border-radius:15px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    padding:5px;\n"
+"    background-color: rgb(0, 170, 127);\n"
+"}\n"
+"QPushButton:hover{\n"
+"    padding:5px;\n"
+"    background-color: rgb(229, 229, 229);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    padding:5px;\n"
+"    background-color: rgb(127, 127, 127);\n"
+"}\n"
+"")
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.horizontalLayout_9.addWidget(self.pushButton_5)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_9)
+        self.horizontalLayout_7.addLayout(self.verticalLayout_5)
+        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem7)
+        self.verticalLayout_4.addLayout(self.horizontalLayout_7)
+        spacerItem8 = QtWidgets.QSpacerItem(20, 118, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem8)
+        self.horizontalLayout_8.addLayout(self.verticalLayout_4)
+        self.stackedWidget.addWidget(self.page_2)
+        self.verticalLayout_3.addWidget(self.stackedWidget)
+        self.horizontalLayout_6.addLayout(self.verticalLayout_3)
+        self.horizontalLayout_10.addWidget(self.widget)
 
         self.retranslateUi(Form)
+        self.stackedWidget.setCurrentIndex(0)
+        self.pushButton_4.clicked.connect(Form.open_login_page) # type: ignore
+        self.pushButton_5.clicked.connect(Form.register) # type: ignore
+        self.pushButton_3.clicked.connect(Form.close) # type: ignore
         self.pushButton.clicked.connect(Form.login) # type: ignore
         self.pushButton_2.clicked.connect(Form.open_register_page) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -147,13 +299,9 @@ class Ui_Form(object):
         self.checkBox_3.setText(_translate("Form", "管理员登录"))
         self.pushButton.setText(_translate("Form", "登录"))
         self.pushButton_2.setText(_translate("Form", "注册"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec())
+        self.label_2.setText(_translate("Form", "管理员注册"))
+        self.lineEdit_3.setPlaceholderText(_translate("Form", "账号"))
+        self.lineEdit_4.setPlaceholderText(_translate("Form", "密码"))
+        self.lineEdit_5.setPlaceholderText(_translate("Form", "确认密码"))
+        self.pushButton_4.setText(_translate("Form", "登录"))
+        self.pushButton_5.setText(_translate("Form", "注册"))
